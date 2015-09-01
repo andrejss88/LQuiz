@@ -1,0 +1,940 @@
+/* body and global */
+body {
+background: #f9fbfb;
+}
+.row {
+margin-right:  0;
+margin-left:  0;
+}
+/* navigation */
+.container {
+width: 100%;
+padding-left: 0;
+padding-right: 0;
+}
+.container .row .col-sm-12 {
+padding-left: 0;
+padding-right: 0;
+}
+#navbar {
+margin-bottom: 0;
+}
+#navbar .navbar-header {
+margin-left: 15%;
+}
+.container>.navbar-header, .container>.navbar-collapse {
+margin-right: 0; /* fixes header creating trouble on the right side of the screen */
+}
+/* jumbotron */
+
+.container .jumbotron {
+background: transparent;
+background-size: cover !important;
+border-radius: 0;
+} 
+.topJumbo {
+min-height: 300px;
+background-size: cover;
+}
+#topHpJumbo{
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/homepage/HpHeroBanner2.jpg') no-repeat;
+min-height: 565px;
+background-size: cover;
+margin-bottom: 0;
+}
+#topHpJumbo h1 {
+line-height: 110px; font-size: 83px;
+padding-top: 6%;
+}
+.HPannotation {
+font-style: italic;
+font-size: 28px;
+}
+
+#topJumbo1 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo1_big.jpg') no-repeat;
+}
+
+#topJumbo2 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo2_big_color.jpg') no-repeat;
+}
+
+#topJumbo3 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo3_big_color.jpg') no-repeat;
+}
+
+#topJumbo4 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo4_big_color.jpg') no-repeat;
+}
+#topJumbo5 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo5_big_color.jpg') no-repeat;
+}
+#topJumbo6 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo6_big_color.jpg') no-repeat;
+}
+.jumbotron .HPheroTextContainer{
+color: white;
+text-align: center;
+}
+.jumbotron .heroTextContainer{
+color: white;
+background: rgba(0,0,0,0.7);
+padding: 10px 30px;
+max-width: 600px;
+}
+.shortJumbo .heroTextContainer{ 
+max-width: 300px;
+}
+.embed-responsive {
+padding-bottom: 54.25%;
+position: relative; display: block;
+height: 0; overflow: hidden;
+}
+.embed-responsive iframe {
+position: absolute; top: 0; bottom: 0; left: 0; width: 100%; height: 100%;border: 0;
+}
+
+.heroVid {
+width: 50%;
+margin: 0 auto;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+/* removes the stupid hardcoded text+link "no content has been created yet" */
+#first-time {
+display: none;
+}
+/* large quote */
+.largeQuote {
+border-left: 0;
+}
+.largeQuote p {
+font-style: italic;
+font-size: 45px;
+}
+.largeQuote .quoteSource {
+font-size: 24px;
+margin-right: 15%
+}
+.quoteSlideWrap {
+min-height: 200px;
+max-width: 1320px;
+margin: 0 auto;
+margin-top: 30px;
+}
+/* carousel dots */
+.carousel-indicators li {
+background-color: #333;
+border: 1px solid #333;
+}
+.carousel-indicators .active {
+background-color: #fff;
+}
+ .carousel-control .glyphicon-chevron-left  ,.carousel-control .glyphicon-chevron-right {
+font-size: 40px;
+right: 0%;
+}
+
+.homePageFlags .btn {
+min-width: 160px;
+}
+.homePageFlags div {
+margin-bottom: 40px;
+}
+.homepageFlag {
+transition: all .2s ease-in-out;
+cursor: pointer;
+margin-bottom: 10px;
+}
+.homepageFlag:hover {
+-webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+       -o-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* footer */
+.footer {
+background: #f8f8f8;
+}
+.footer .region-footer ul.nav {
+text-align: center;
+}
+.footer .region-footer ul.nav li.leaf {
+display: inline-block;
+color:  #777 ;
+}
+.footer .region-footer ul.nav li.leaf a {
+color:  #777 ;
+}
+/* course collection page */
+.course h2 {
+text-align: center;
+}
+.course .start {
+text-align: center;
+}
+.course .start .btn  {
+min-width: 180px;
+}
+.course sup, .freeDownloads sup {
+font-size: 60%;
+}
+.course .glyphicon, .vocabSelection .glyphicon {
+font-size: 65px;
+margin-bottom: 15px;
+margin-right: -58px;
+}
+.course a, .vocabSelection p {
+font-size: 24px;
+color: #333;
+}
+.course .col-sm-4, .vocabSelection .col-xs-6 {
+padding: 25px 0;
+}
+
+.course .col-sm-4:hover, .centralWrap .col-sm-6:hover, .vocabSelection .col-xs-6:hover {
+background-color:#ebebeb;
+}
+.freeDownloads .col-sm-6:hover{
+background-color: none;
+}
+/* free downloads */
+.freeDownloads ul{
+list-style-type: none;
+margin-left: 33px;
+}
+.freeDownloads .glyphicon {
+font-size: 24px
+}
+.freeDownloads a {
+font-size: 18px
+}
+/* popover tips */
+.courseTip {
+margin: -20px 0 30px 0;
+}
+.popover {
+position: relative;
+display: block;
+}
+
+.popover.bottom .arrow {
+top: -11px;
+left: 20%;
+}
+/* popover tips */
+.comingSoon {
+overflow: hidden;
+position: relative;
+padding: 20px 0 20px 0;
+}
+.comingSoon:hover .comingSoonText {
+-webkit-transform: translateY(0);
+-moz-transform: translateY(0);
+-ms-transform: translateY(0);
+-o-transform: translateY(0);
+transform: translateY(0);
+ -webkit-transition: all 350ms;
+-moz-transition: all 350ms;
+-o-transition: all 350ms;
+transition: all 350ms;
+}
+.comingSoonText {
+background: rgba(0, 0, 0, 0.7);
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+font-size: 65px;
+color: white;
+-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+transform: translateY(100%);
+}
+.progress-bar {
+background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+background-size: 40px 40px;
+}
+
+
+/* lesson collection page 
+**************************/
+.centralWrap h2 a {
+color: #333;
+}
+.centralWrap {
+max-width: 1300px;
+margin: 0 auto;
+}
+.centralWrapBlocks {
+max-width: 800px;
+margin: 0 auto;
+}
+.centralWrapBlocks img{
+height: 201px;
+max-width: 370px;
+}
+.centralWrapBlocks .glyphicon{
+font-size: 190px;
+margin-left: 20%;
+color: black;
+}
+.lessonsWrap > .row {
+margin-bottom: 0; /*for equal spacing between every 2 lessons */
+}
+
+
+/* lesson itself
+**************************/
+.lessonVideoWrap {
+background: #1b1b1b;
+margin-bottom: 50px;
+}
+.lessonVideo {
+max-width: 960px;
+margin: 0 auto;
+}
+.RusLetters {
+text-align: right;
+font-weight: bold;
+font-size: 18px;
+}
+
+/* table styling */
+.centralWrap .table thead th{
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+}
+.centralWrap .table td{
+    text-align: center;
+}
+.practiceTable tbody tr:first-child {
+    font-weight: bold;
+}
+/* popover (a.k.a. the new tooltip) */
+
+.practiceTable a   {
+text-decoration: underline;
+cursor: pointer;
+}
+
+.well h3 {
+margin: 0 0 20px 0;
+}
+
+
+
+
+
+
+
+/* fill in the blank - onpage */
+.exerWrap {
+margin-top: 50px;
+text-align: center;
+}
+.exerTask {
+font-size: 24px;
+}
+.exerEvaluation {
+text-align: center;
+padding-top: 15px;
+height: 100%;
+max-width: 402px;
+}
+.resultNum {
+font-size: 63px;
+}
+.FillIn p{
+padding-bottom: 5px;
+}
+.FillIn input , .Rearrange input, .MatchRightOptions span {
+background-color: #F9F9F9;
+padding: 5px;
+border: solid 1px #c4c7cb;
+box-shadow: inset 0px 1px 1px #e0e4e9;
+font-weight: bold;
+width: 75px;
+margin-right: 5px;
+	}
+.hidden {
+	    display:none; 
+	}	
+.specialCharWrap {
+margin-top: 10px;
+clear: both;
+display: table;
+margin: 0 auto;
+}
+.specialCharWrap button {
+font-size: 12px;
+-webkit-appearance: none;
+margin: 0 4px 4px 0;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+background: -moz-linear-gradient(top,#fff,#e1e1e1);
+background: -webkit-gradient(linear,left top,left bottom,color-stop(0.00,#fff),color-stop(1.00,#e1e1e1));
+filter: progid:DXImageTransform.Microsoft.gradient(Enabled='true',StartColorStr=#ffffffff,EndColorStr=#ffe1e1e1,GradientType=0);
+border: 1px solid #ccc;
+border-color: #ccc #999 #999 #ccc;
+    padding: 4px 7px;
+cursor: pointer;
+color: #000;
+float: left;
+height: 24px;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.answerButtons input {
+margin-right: 5px;
+}
+#QuizAll {
+    display: none;
+}
+.hideQuizBtn {
+    display: none;
+}
+.exerButtons input {
+    cursor:pointer;
+    padding:8px;
+    color:#fff;
+    margin-bottom:5px;
+    width:100px;
+    border-radius:5px;
+}
+ .checkAnswers,   .checkAnswersAll {
+    background:#00A2E8;
+    border:1px solid #00A2E8;
+   /* border-top-right-radius:0;
+    border-bottom-right-radius:0; */
+    min-width:140px;
+}
+ .showCorrectAnswers,   .showCorrectAnswersAll {
+    background:#98D349;
+    border:1px solid #98D349;
+    display:none;
+}
+.exerButtons .clearAnswers  {
+    border:1px solid;
+    background:transparent;
+    color:black;
+   /* border-top-left-radius:0;
+    border-bottom-left-radius:0; */
+    display:none;
+}
+/* new exercises CSS
+*****************************/
+.FillIn, .multiForm {
+padding: 11px 20px 10px 20px;
+}
+.quizSummaryText {
+padding-bottom: 10px;
+font-size: 24px;
+}
+.exerBottomWrap {
+padding: 10px 0 0 25px;
+clear: both;
+}
+
+/* multiple choice
+********************/
+.multiForm ul {
+display: inline-block;
+}
+.multiForm span {
+	margin-left: 3px;
+	cursor: pointer;
+		font-weight: 200;
+}
+
+.selectedCheckbox {
+    background: #186AB1;
+    color: white;
+}
+.multiForm input {
+    width: 18px;
+    height: 18px;
+    background: #fcfff4;
+	margin: 0;
+padding: 0;
+}
+.multiForm input:hover {
+cursor: pointer;
+}
+.multiForm ul li {
+list-style: none;
+padding: 3px 15px;
+margin-left: 15px;
+display: table;
+margin: 5px 0;
+ border-radius: 5px;
+}
+.multiForm ul li:hover {
+box-shadow: 1px 1px 6px 1px rgba(189, 189, 189, 0.9);
+cursor: pointer;
+}
+.trueFalse ul li {
+list-style: none;
+padding: 3px 15px;
+margin-left: 15px;
+display: inline-block;
+}
+.correctAnswer {
+  background: rgb(230, 248, 173);
+   color: #769c00;
+}
+.incorrectAnswer {
+background: rgb(252, 206, 197);
+color:rgb(202, 48, 23);
+}
+.checkedAnswer {
+box-shadow: 1px 1px 8px 4px rgba(189, 189, 189, 0.9);
+    font-weight: bold;
+}
+
+.Rearrange input {
+    display: inline-block;
+}
+.Rearrange span {
+font-weight: bold;
+}
+/* matching */
+.Match {
+    float: left;
+ width: 48%;
+ padding: 0;
+}
+.Match input{
+width: 35px;
+text-align: center;
+padding: 4px 10px;
+}
+.Match label {
+display: inline-block;
+font-weight: 200;
+vertical-align: -2px;
+font-weight: 200;
+}
+.Match ul {
+ padding: 0;
+ text-align: left;
+margin-left: 35%;
+}
+.Match ul li, .MatchRightOptions ul li{
+list-style-type: none;    
+margin-left: 0px;
+}
+.Match ul li {
+margin-bottom: 6px;
+}
+.MatchRightOptions ul {
+text-align: left;
+margin-left: 30%;  
+}
+.MatchRightOptions ul li{
+margin-bottom:15px;    
+}
+.MatchRightOptions span{
+padding: 4px 10px;  
+}
+
+.MatchRightOptions {
+    float: left;
+	width:49%;
+}
+.exerButtons {
+clear:both;
+}
+
+/* prevNext lesson buttons 
+***********************/
+.prevNext { margin-top: 30px;  }
+.prevNext a.btn { font-size: 24px; }
+.prevLesson { 
+background: #428bca url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/lessons/arrow-left.png') no-repeat 0% 50%;
+
+}
+
+.nextLesson { 
+background: #428bca url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/lessons/arrow-right.png') no-repeat 100% 50%;
+}
+
+/* Exercises only page
+***********************/
+.panel-heading {
+text-align: center;
+}
+.panel-heading h3{
+font-size: 30px;
+margin: 10px 0 15px 0;
+}
+.panel-body {
+background: #f9fbfb;
+}
+
+
+/* Vocab list
+***********************/
+.lessonVocabWrap .cold-md-6:first-child, .lessonVocabWrap .col-xs-4 {
+padding-right: 0;
+}
+
+.vocabWords li {
+list-style-type: none;
+font-size: 24px;
+padding: 10px 16px;
+cursor: pointer;
+}
+.vocabWords li:hover {background-color: #f5f5f5; }
+
+.vocabExamples {
+padding-bottom: 20px;
+}
+.selectedWord {
+background-color: #f5f5f5;
+border-bottom:1px solid #e3e3e3;
+}
+.unSelectedWord {
+background-color: transparent;
+border: none;
+}
+.hideMe {
+display: none;
+}
+.reviseTrigger , .quickTestTrigger {
+cursor: pointer;
+}
+p.reviseTrigger:hover , p.quickTestTrigger:hover {
+text-decoration: underline;
+}
+.vocabSelection a {
+color: #333;
+}
+/* media queries 
+***********************/
+
+
+@media (min-width: 768px) { 
+/* .exercisesCollection {
+padding-left: 20%
+} 
+ // used to better center exercises only page without accordion
+*/
+}
+/* jumbotron  on resize (rearranging hero text and vid */
+@media (min-width: 768px) and (max-width: 1300px) { 
+
+.jumbotron h1 {
+font-size: 45px;
+line-height: 1.3;
+}
+#homePageJumbotron {
+min-height: 435px;
+}
+}
+@media (max-width: 992px) {
+.jumbotron {
+padding-top: 0;
+}
+#topHpJumbo{
+background-position: 40% 50%;
+}
+#topHpJumbo h1 {
+padding-top: 15%;
+margin-top: 0;
+}
+#topHpJumbo .heroTextContainer {
+margin-bottom: 20px;
+}
+.heroVid {
+width: 100%;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+/* .row {
+margin-bottom: 30px;
+}*/
+#homePageJumbotron h1 {
+font-size: 45px;
+text-align: center;
+line-height: 1.2;
+margin-top: 50px;
+}
+.jumbotron .heroWatchme {
+display: none;
+}
+.col-md-6 .heroHeader {
+display: none;
+}
+.jumbotron .embed-responsive {
+ margin-top: 0;
+}
+}/* @media bracket */
+
+@media (max-width: 768px){
+.embed-responsive {
+margin-top: 30px;
+}
+
+.largeQuote p {
+font-size: 24px;
+}
+.largeQuote .quoteSource {
+font-size: 16px;
+}
+.founderPic {
+width: 120px;
+margin: 0 auto;
+display: block;
+}
+.quoteSlideWrap {
+min-height: 130px;
+
+}
+ .carousel-control .glyphicon-chevron-left  ,.carousel-control .glyphicon-chevron-right {
+font-size: 20px;
+}
+
+.courseTip {
+display: none;
+}
+.comingSoonText p{
+font-size: 45px;
+}
+.course .row {
+margin-bottom: 0;
+}
+.topJumbo {
+min-height: 150px;
+}
+
+/* .topJumbo h1 {
+background: rgba(0, 0, 0, 0.8);
+display: inline-block;
+padding: 10px 20px;
+} */
+#topHpJumbo{
+/*background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/homepage/HpHeroBanner2_small.jpg') no-repeat;
+*/
+background-position: 50% 50%;
+min-height: 425px;
+}
+#topHpJumbo  h1 {
+display: block;
+padding: 10px 20px;
+text-align: center;
+font-size: 43px;
+margin-top: 0;
+padding-top: 15%;
+}
+.HPannotation {
+font-size: 20px;
+}
+
+#topJumbo1 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo1_small.jpg') no-repeat;
+}
+
+#topJumbo2 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo2_small_color.jpg') no-repeat;
+}
+
+#topJumbo3 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo3_small_color.jpg') no-repeat;
+}
+#topJumbo4 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo4_small_color.jpg') no-repeat;
+}
+
+#topJumbo5 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo5_small_color.jpg') no-repeat;
+}
+#topJumbo6 {
+background: url('http://belanguaged.com/sites/all/themes/bootstrap_subtheme/images/jumbotrons/topJumbo6_small_color.jpg') no-repeat;
+}
+.exerEvaluation {
+max-width: 100%;
+}
+.exerWrap  .row {
+margin-bottom: 0;
+}
+.resultNum {
+font-size: 24px;
+}
+
+} /*media bracket */
+@media (min-width:1300px) {
+.popover.bottom .arrow {
+left: 35%;
+}
+}
+@media (max-width : 481px) {
+#topHpJumbo{ 
+min-height: 280px;
+}
+#topHpJumbo h1 {
+font-size: 24px;
+line-height: 50px;
+padding-top: 25%;
+}
+.HPannotation {
+font-size: 14px;
+}
+#topJumbo1, #topJumbo2, #topJumbo3, #topJumbo4, #topJumbo5{
+background-position: 60% 50%;
+} 
+.Match ul , .MatchRightOptions ul {
+margin-left: 0;
+}
+.exerButtons .clearAnswers {
+border-radius: 0;
+}
+.course .glyphicon  , .vocabSelection .glyphicon {
+font-size: 50px;
+margin-right: -45px;
+}
+.prevNext a.btn {  font-size: 18px; }
+
+.prevLesson, .nextLesson{
+background-size: 80px;
+}
+}
+
+.test {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.hint {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	
+}
+.hinted {
+    background-color: rgb(230, 248, 173);
+}
+.hintBtn {
+    min-width: 120px;
+		    background: #98D349;
+    border: 1px solid #98D349;
+}
+.overlay-bg {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    background: #000;
+    /* fallback */
+    background: rgba(0, 0, 0, 0.85);
+}
+.overlay-content {
+    width: 780px;
+    height: 465px;
+    position: relative;
+    margin: 0 auto;
+    cursor: default;
+    color: #fff;
+    padding: 30%;
+    font-size: 32px;
+}
+.QuizEvaluation {
+    max-width: 100% !important;
+}
+.timerWrap {
+font-size: 24px;
+}
+#StartQ {
+      background: #3498db;
+  background-color: #f62b2b; background-image: -webkit-gradient(linear, left top, left bottom, from(#f62b2b), to(#d20202));
+ background-image: -webkit-linear-gradient(top, #f62b2b, #d20202);
+ background-image: -moz-linear-gradient(top, #f62b2b, #d20202);
+ background-image: -ms-linear-gradient(top, #f62b2b, #d20202);
+ background-image: -o-linear-gradient(top, #f62b2b, #d20202);
+ background-image: linear-gradient(to bottom, #f62b2b, #d20202);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f62b2b, endColorstr=#d20202);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+        border: none;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+    min-width: 100%;
+    margin: 0 auto;
+    display: block;
+    
+}
+
+#StartQ:hover {
+ background-color: #e40a0a; background-image: -webkit-gradient(linear, left top, left bottom, from(#e40a0a), to(#9f0202));
+ background-image: -webkit-linear-gradient(top, #e40a0a, #9f0202);
+ background-image: -moz-linear-gradient(top, #e40a0a, #9f0202);
+ background-image: -ms-linear-gradient(top, #e40a0a, #9f0202);
+ background-image: -o-linear-gradient(top, #e40a0a, #9f0202);
+ background-image: linear-gradient(to bottom, #e40a0a, #9f0202);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#e40a0a, endColorstr=#9f0202);
+  text-decoration: none;
+}
+#QuizDiff {
+    text-align: center;
+}
+#QuizDiff input{
+       transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
+#QuizDiff label{
+   margin: 0 25px 10px 10px;
+    font-size: 22px;
+    font-weight: 100;
+}
+#timwerWrap {
+margin-top: 10px;
+}
+#RestartQ {
+ color: #000;
+     min-width: 140px;
+}
+#QuizExplanation .points {
+        padding: 5px;
+    border: solid 1px #c4c7cb;
+    box-shadow: inset 0px 1px 1px #e0e4e9;
+    font-weight: bold;
+    width: 85px;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+#QuizExplanation .correct {
+        border-color: rgb(118, 156, 0);
+    color: rgb(118, 156, 0);
+    background: rgb(230, 248, 173);
+}
+#QuizExplanation .almostCorrect {
+        color: rgb(138, 109, 59);
+    border-color: rgb(250, 235, 204);
+    background-color: rgb(252, 248, 227);
+}
+#QuizExplanation .incorrect {
+        color: rgb(202, 48, 23);
+    border-color: rgb(202, 48, 23);
+    background: rgb(252, 206, 197);
+}
+#QuizExplanation #gotit {
+  float: right;
+    background: #00A2E8;
+    border: 1px solid #00A2E8;
+    color: white;
+    padding: 3px 12px;
+    border-radius: 5px;  
+    
+}
