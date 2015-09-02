@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>LQuiz</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="Bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+ 
+ 
+ 
+<br>
+<div class="centralWrap">
+
+    <!-- This always stays -->
+    <div class="row ">
+        <div class="row StartQuiz col-sm-8">
+            <input id="StartQ" type="button" value="Start Quiz">
+            <br>
+            <form id="QuizDiff">
+                <input checked="checked" id="easier" name="difficulty" type="radio">
+                <label>Easier</label>
+                <input id="harder" name="difficulty" type="radio">
+                <label>Harder</label>
+                <div id="timwerWrap">
+                    <input id="timer" type="checkbox">
+                    <label>Against time</label>
+                </div>
+            </form>
+        </div>
+        <!-- quiz scoring explanation -->
+        <div class="col-sm-4 well" id="QuizExplanation">
+            <!-- explanation -->
+            <div class="row"><span class="points correct">+ 2 points</span>  <span class="PointsExplanation">Correct! </span>
+                <br><span class="points almostCorrect">+ 1 point </span>  <span class="PointsExplanation"> Almost correct / Correct Multi-Choice </span>
+                <br><span class="points incorrect">0 points </span>  <span class="PointsExplanation">Wrong. Sorry </span>
+            </div>
+            <!-- got it btn -->
+            <div class="row">
+                <button id="gotit" style="float: right;">Got it</button>
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	<!-- exercises start -->
+	
+    <div class="row" id="QuizAll">
+	
+	
+	<!-- Matching START -->
+        <div class="exerWrap FillinTheBlank row">
+            <div class="col-sm-8">
+                <!-- Exercise + buttons -->
+                <div class="exerTopWrap">
+                    <p class="exerTask"><span class="glyphicon glyphicon-pencil">&nbsp;</span>Match</p>
+                    <form class="FillIn Match">
+                        <ul>
+                            <li>
+                                <input data-correctanswer="b" name="" type="text"><span>Oracle</span>
+                            </li>
+                            <li>
+                                <input data-correctanswer="a" name="" type="text"><span>JS</span>
+                            </li>
+                            <li>
+                                <input data-correctanswer="c" name="" type="text"><span>ASP</span>
+                            </li>
+                            <li>
+                                <input data-correctanswer="e" name="" type="text"><span>Adobe</span>
+                            </li>
+                            <li>
+                                <input data-correctanswer="d" name="" type="text"><span>SQL</span>
+                            </li>
+                        </ul>
+                    </form>
+                    <div class="MatchRightOptions">
+                        <ul>
+                            <li><span>A</span>JavaScript</li>
+                            <li><span>B</span>Java</li>
+                            <li><span>C</span>.NET</li>
+                            <li><span>D</span>Database</li>
+                            <li><span>E</span>Photoshop</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exerButtons row">
+                    <input class="checkAnswers" type="button" value="Check">
+                    <input class="hintBtn" type="button" value="Hint">
+                    <input class="showCorrectAnswers" type="button" value="Correct">
+                    <input class="clearAnswers" type="button" value="Clear">
+                </div>
+            </div>
+            <!-- END of Exercise + buttons -->
+            <div class="col-sm-4 exerEvaluation">
+                <!-- Evaluation -->
+            </div>
+        </div>
+		
+		
+			<!-- Matching END -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<!-- Fill in the blank START -->
+        <div class="exerWrap FillinTheBlank row">
+            <div class="col-sm-8">
+                <!-- Exercise + buttons -->
+                <div class="exerTopWrap">
+                    <p class="exerTask"><span class="glyphicon glyphicon-pencil">&nbsp;</span>(Language Quiz example) Fill in with "sommes", "est", "je", "elle" and "suis"</p>
+                    <form class="FillIn">
+                        <p>1.
+                            <input data-correctanswer="je" name="" type="text">suis Marie.</p>
+                        <p>2. Il
+                            <input data-correctanswer="est" name="" type="text">acteur.</p>
+                        <p>3. Nous
+                            <input data-correctanswer="sommes" name="" type="text">Pierre <a data-content="Ils sont Marie et Pierre." data-original-title="Et - And" data-toggle="popover" title="">et</a> Patrick.</p>
+                        <p>4.
+                            <input data-correctanswer="elle" name="" type="text">est Natalie.</p>
+                        <p>5. Je
+                            <input data-correctanswer="suis" name="" type="text">Pierre.</p>
+                    </form>
+                </div>
+                <div class="exerButtons row">
+                    <input class="checkAnswers" type="button" value="Check">
+                    <input class="hintBtn" type="button" value="Hint">
+                    <input class="showCorrectAnswers" type="button" value="Correct">
+                    <input class="clearAnswers" type="button" value="Clear">
+                </div>
+            </div>
+            <!-- END of Exercise + buttons -->
+            <div class="col-sm-4 exerEvaluation">
+                <!-- Evaluation -->
+            </div>
+        </div>
+		
+		
+			<!-- Fill in the blank END -->
+		
+		
+		
+		
+		
+		<!-- Multiple choice START   -->
+        <div class="exerWrap multipleChoiceExercise row">
+            <div class="col-sm-8">
+                <!-- Exercise + buttons -->
+                <div class="exerTopWrap">
+                    <p class="exerTask"><span class="glyphicon glyphicon-pencil">&nbsp;</span>Choose the right option</p>
+                    <form class="multiForm">
+                        <p>1.Mark-up language</p>
+                        <ul>
+                            <li>
+                                <input data-correctanswer="HTML" name="question1" type="radio"><span>HTML</span>
+                            </li>
+                            <li>
+                                <input name="question1" type="radio"><span>CSS</span>
+                            </li>
+                            <li>
+                                <input name="question1" type="radio"><span>JavaScript</span>
+                            </li>
+                        </ul>
+                        <p>2. Server-side language</p>
+                        <ul>
+                            <li>
+                                <input name="question2" type="radio"><span>HTML</span>
+                            </li>
+                            <li>
+                                <input data-correctanswer="PHP" name="question2" type="radio"><span>PHP</span>
+                            </li>
+                            <li>
+                                <input name="question2" type="radio"><span>CSS</span>
+                            </li>
+                        </ul>
+                        <p>3. Programming language</p>
+                        <ul>
+                            <li>
+                                <input data-correctanswer="Java" name="question3" type="radio"><span>Java</span>
+                            </li>
+                            <li>
+                                <input name="question3" type="radio"><span>French</span>
+                            </li>
+                            <li>
+                                <input name="question3" type="radio"><span>Spanish</span>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="exerButtons row">
+                    <input class="checkAnswers" type="button" value="Check">
+                    <input class="hintBtn" type="button" value="Hint">
+                    <input class="showCorrectAnswers" type="button" value="Correct">
+                    <input class="clearAnswers" type="button" value="Clear">
+                </div>
+            </div>
+            <!-- END of Exercise + buttons -->
+            <div class="col-sm-4 exerEvaluation">
+                <!-- Evaluation -->
+            </div>
+        </div>
+		
+		
+		
+		<!-- Multiple choice END   -->
+		
+	 
+	 
+	 	<!-- Rearrange Start   -->
+        <div class="exerWrap RearrangeWords row">
+            <div class="col-sm-8">
+                <!-- Exercise + buttons -->
+                <div class="exerTopWrap row">
+                    <p class="exerTask"><span class="glyphicon glyphicon-pencil">&nbsp;</span>Rearrange the words in the correct order.</p>
+                    <form class="FillIn Rearrange">
+                        <p>1. see / tomorrow / you</p>
+                        <p>
+                            <input data-correctanswer="see" type="text">,
+                            <input data-correctanswer="you" type="text">
+                            <input data-correctanswer="tomorrow" type="text">?</p>
+                        <p>2. you / very / thank / much</p>
+                        <p>
+                            <input data-correctanswer="thank" type="text">
+                            <input data-correctanswer="you" type="text">
+                            <input data-correctanswer="very" type="text">
+							 <input data-correctanswer="much" type="text">
+                        </p>
+                        
+                    </form>
+                </div>
+                <div class="exerButtons row">
+                    <input class="checkAnswers" type="button" value="Check">
+                    <input class="hintBtn" type="button" value="Hint">
+                    <input class="showCorrectAnswers" type="button" value="Correct">
+                    <input class="clearAnswers" type="button" value="Clear">
+                </div>
+            </div>
+            <!-- END of Exercise + buttons -->
+            <div class="col-sm-4 exerEvaluation">
+                <!-- Evaluation -->
+            </div>
+        </div>
+			 	<!-- Rearrange END   -->
+		
+		
+		
+		
+		
+		
+		
+		<!-- Evaluation buttons -->
+        <div class="row exerWrap clearFinal col-sm-8">
+            <div class="exerButtons row">
+                <input class="checkAnswersAll" id="checkExam" type="button" value="Check">
+                <input class="showCorrectAnswersAll" type="button" value="Correct">
+                <input class="btn btn-default" id="RestartQ" type="button" value="Restart Quiz">
+            </div>
+            <div class="exerEvaluation QuizEvaluation">&nbsp;</div>
+        </div>
+    </div>
+    <div class="specialCharWrap hidden ">&nbsp;</div>
+</div>
+ 
+ 
+ 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+<script>if (!window.jQuery) { document.write('<script src="jquery-1.11.3.min.js"><\/script>'); }
+</script>
+  <script src="Bootstrap/js/bootstrap.min.js"> </script>
+ <script src="script.js"> </script>
+ 
+ 
+</body>
+</html>
