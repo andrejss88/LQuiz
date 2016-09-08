@@ -72,7 +72,7 @@ height: 24px;
 .answerButtons input {
 margin-right: 5px;
 }
-#QuizAll {
+#quizContainer {
     display: none;
 }
 .hideQuizBtn {
@@ -86,14 +86,14 @@ margin-right: 5px;
     width:100px;
     border-radius:5px;
 }
- .checkAnswers,   .checkAnswersAll {
+ .checkSingleExercise,   .checkEntireQuiz {
     background:#00A2E8;
     border:1px solid #00A2E8;
    /* border-top-right-radius:0;
     border-bottom-right-radius:0; */
     min-width:140px;
 }
- .showCorrectAnswers,   .showCorrectAnswersAll {
+ .showCorrectAnswers,   #showCorrectAnswersAll {
     background:#98D349;
     border:1px solid #98D349;
     display:none;
@@ -273,7 +273,7 @@ clear:both;
 .timerWrap {
 font-size: 24px;
 }
-#StartQ {
+#startQuiz {
       background: #3498db;
   background-color: #f62b2b; background-image: -webkit-gradient(linear, left top, left bottom, from(#f62b2b), to(#d20202));
  background-image: -webkit-linear-gradient(top, #f62b2b, #d20202);
@@ -319,7 +319,7 @@ font-size: 24px;
 #timwerWrap {
 margin-top: 10px;
 }
-#RestartQ {
+#restartQuiz {
  color: #000;
      min-width: 140px;
 }

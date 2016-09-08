@@ -17,14 +17,14 @@
     <!-- This always stays -->
     <div class="row ">
         <div class="row StartQuiz col-sm-8">
-            <input id="StartQ" type="button" value="Start Quiz">
+            <input id="startQuiz" type="button" value="Start Quiz">
             <br>
             <form id="QuizDiff">
                 <input checked="checked" id="easier" name="difficulty" type="radio">
                 <label>Easier</label>
                 <input id="harder" name="difficulty" type="radio">
                 <label>Harder</label>
-                <div id="timwerWrap">
+                <div id="timerWrap">
                     <input id="timer" type="checkbox">
                     <label>Against time</label>
                 </div>
@@ -49,7 +49,7 @@
 	
 	<!-- exercises start -->
 	
-    <div class="row" id="QuizAll">
+    <div class="row" id="quizContainer">
 	
 	
 	<!-- Matching START -->
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="exerButtons row">
-                    <input class="checkAnswers" type="button" value="Check">
+                    <input class="checkSingleExercise" type="button" value="Check">
                     <input class="hintBtn" type="button" value="Hint">
                     <input class="showCorrectAnswers" type="button" value="Correct">
                     <input class="clearAnswers" type="button" value="Clear">
@@ -131,7 +131,7 @@
                     </form>
                 </div>
                 <div class="exerButtons row">
-                    <input class="checkAnswers" type="button" value="Check">
+                    <input class="checkSingleExercise" type="button" value="Check">
                     <input class="hintBtn" type="button" value="Hint">
                     <input class="showCorrectAnswers" type="button" value="Correct">
                     <input class="clearAnswers" type="button" value="Clear">
@@ -196,7 +196,7 @@
                     </form>
                 </div>
                 <div class="exerButtons row">
-                    <input class="checkAnswers" type="button" value="Check">
+                    <input class="checkSingleExercise" type="button" value="Check">
                     <input class="hintBtn" type="button" value="Hint">
                     <input class="showCorrectAnswers" type="button" value="Correct">
                     <input class="clearAnswers" type="button" value="Clear">
@@ -212,6 +212,93 @@
 		
 		<!-- Multiple choice END   -->
 		
+	 
+	 
+	 
+	 
+	 
+	 		
+		
+		<!-- Multiple choice START   -->
+        <div class="exerWrap multipleChoiceExercise row">
+            <div class="col-sm-8">
+                <!-- Exercise + buttons -->
+                <div class="exerTopWrap">
+                    <p class="exerTask"><span class="glyphicon glyphicon-pencil">&nbsp;</span>Choose the right option</p>
+                    <form class="multiForm">
+                        <p>1.IT Company</p>
+                        <ul>
+                            <li>
+                                <input data-correctanswer="Microsoft" name="question1" type="radio"><span>Microsoft</span>
+                            </li>
+                            <li>
+                                <input name="question1" type="radio"><span>Shell</span>
+                            </li>
+                            <li>
+                                <input name="question1" type="radio"><span>Citi Bank</span>
+                            </li>
+                        </ul>
+                        <p>2. An operating system</p>
+                        <ul>
+                            <li>
+                                <input name="question2" type="radio"><span>Dell</span>
+                            </li>
+                            <li>
+                                <input data-correctanswer="Linux" name="question2" type="radio"><span>Linux</span>
+                            </li>
+                            <li>
+                                <input name="question2" type="radio"><span>Acer</span>
+                            </li>
+                        </ul>
+                        <p>3. Web programming language</p>
+                        <ul>
+                            <li>
+                                <input data-correctanswer="Javascript" name="question3" type="radio"><span>Javascript</span>
+                            </li>
+                            <li>
+                                <input name="question3" type="radio"><span>HTML</span>
+                            </li>
+                            <li>
+                                <input name="question3" type="radio"><span>SQL</span>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="exerButtons row">
+                    <input class="checkSingleExercise" type="button" value="Check">
+                    <input class="hintBtn" type="button" value="Hint">
+                    <input class="showCorrectAnswers" type="button" value="Correct">
+                    <input class="clearAnswers" type="button" value="Clear">
+                </div>
+            </div>
+            <!-- END of Exercise + buttons -->
+            <div class="col-sm-4 exerEvaluation">
+                <!-- Evaluation -->
+            </div>
+        </div>
+		
+		
+		
+		<!-- Multiple choice END   -->
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 	 
 	 	<!-- Rearrange Start   -->
@@ -237,7 +324,7 @@
                     </form>
                 </div>
                 <div class="exerButtons row">
-                    <input class="checkAnswers" type="button" value="Check">
+                    <input class="checkSingleExercise" type="button" value="Check">
                     <input class="hintBtn" type="button" value="Hint">
                     <input class="showCorrectAnswers" type="button" value="Correct">
                     <input class="clearAnswers" type="button" value="Clear">
@@ -259,9 +346,9 @@
 		<!-- Evaluation buttons -->
         <div class="row exerWrap clearFinal col-sm-8">
             <div class="exerButtons row">
-                <input class="checkAnswersAll" id="checkExam" type="button" value="Check">
-                <input class="showCorrectAnswersAll" type="button" value="Correct">
-                <input class="btn btn-default" id="RestartQ" type="button" value="Restart Quiz">
+                <input class="checkEntireQuiz" id="checkExam" type="button" value="Check">
+                <input id="showCorrectAnswersAll" type="button" value="Answers">
+                <input class="btn btn-default" id="restartQuiz" type="button" value="Restart Quiz">
             </div>
             <div class="exerEvaluation QuizEvaluation">&nbsp;</div>
         </div>
