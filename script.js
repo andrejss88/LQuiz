@@ -9,10 +9,9 @@
     var secPerDiffExercise = 30; // seconds allocated per exercise if "harder" is chosen; change at will
     var showTimerOption = true; // false = do not show "Against time"
     var evaluateEntireQuiz = true; // true = one evaluation btn at the bottom; false = each exercise evaluated individually
-    var hintsLeft; //   number of Hints (defined by quizDifficulty)
-
 
     /********** Global variables **********/
+    var hintsLeft; //   defined by quizDifficulty
     var progressBar = '<div class="progress"> <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-bar progress-bar-striped" role="progressbar"></div></div>';
     var textQuestions = $('.FillIn input[type=text]');
     var quizContainer = '#quizContainer';
@@ -114,15 +113,15 @@
       showMultiChoiceAnswers(correctMultiChoiceAnswers);
     });
 
-  function getMultiChoiceCorrectAnswers(webElement){
-        return webElement.find(correctMultiChoiceAnswer).next('span');
+    function getMultiChoiceCorrectAnswers(webElement) {
+      return webElement.find(correctMultiChoiceAnswer).next('span');
     }
 
- function getTextQuestions(webElement){
-        return webElement.find(textQuestions);
+    function getTextQuestions(webElement) {
+      return webElement.find(textQuestions);
     }
 
-   function showTextAnswers(textQuestions) {
+    function showTextAnswers(textQuestions) {
       $(textQuestions).each(function() {
         $(this).val($(this).data('correctanswer')).makeGreen();
       });
@@ -139,9 +138,9 @@
       var container = getExerciseContainer($(this));
       var feedbackField = container.find('.exerEvaluation');
       if (isTextType(container) || container.hasClass('clearFinal')) {
-      getTextQuestions(container).val('').makeWhite();
+        getTextQuestions(container).val('').makeWhite();
         feedbackField.clearIt();
-      } else if (container.hasClass('multipleChoiceExercise')) {
+      } else if (isMultiChoiceType(container)) {
         $('.multiForm li').removeClass();
         $('.multiForm input').prop('checked', false);
 
@@ -152,6 +151,7 @@
 
     /**********Hint: show one random correct answer **************/
     var hintBtn = $('.hintBtn');
+
     hintBtn.click(function() {
       var container = getExerciseContainer($(this));
 
@@ -162,8 +162,7 @@
       }
 
       if (hintsLeft === 0) {
-        hintBtn.val('No more hints');
-        hintBtn.makeGrey();
+        disableHints();
       }
 
       function giveHint() {
@@ -175,14 +174,13 @@
       }
 
       function hintTextAnswer() {
-        var unansweredQuestions =  getTextQuestions(container).filter(function() {
+        var unansweredQuestions = getTextQuestions(container).filter(function() {
           return !this.value;
         });
         var randomInput = Math.floor(Math.random() * unansweredQuestions.length);
         var randomUnansweredQuestion = $(unansweredQuestions).eq(randomInput);
 
         if (unansweredQuestions.length > 0) {
-          hintsLeft--;
           updateHintsLeft();
           insertCorrectTextAnswer(randomUnansweredQuestion);
         }
@@ -191,13 +189,16 @@
       function hintMultiChoiceAnswer() {
         var correctAnswers = container.find(correctMultiChoiceAnswer).not(':checked');
         if (correctAnswers.length > 0) {
-          hintsLeft--;
           updateHintsLeft();
           selectCorrectMultiChoiceAnswer(correctAnswers);
         }
       }
     });
 
+    function disableHints() {
+      hintBtn.val('No more hints');
+      hintBtn.makeGrey();
+    }
 
     /**********Result feedback **************/
     var Afeedback1 = '<p class="quizSummaryText">Excellent!</p>';
@@ -226,14 +227,14 @@
       });
     }
 
-    function generateButton(correctAnswer, lettersToMatch){
-       for (var i = 0; i < correctAnswer.length; i++) {
-              var matchedLetter = correctAnswer[i].match(new RegExp(lettersToMatch));
-              if (matchedLetter) {
-                buttons += '<button>' + correctAnswer[i] + '</button>';
-                lettersToMatch = lettersToMatch.replace(matchedLetter[0], "");
-              }
-            }
+    function generateButton(correctAnswer, lettersToMatch) {
+      for (var i = 0; i < correctAnswer.length; i++) {
+        var matchedLetter = correctAnswer[i].match(new RegExp(lettersToMatch));
+        if (matchedLetter) {
+          buttons += '<button>' + correctAnswer[i] + '</button>';
+          lettersToMatch = lettersToMatch.replace(matchedLetter[0], "");
+        }
+      }
     }
 
     createButtons("[éèçêïëáíóúüñäöüß]");
@@ -536,6 +537,7 @@
     }
 
     function updateHintsLeft() {
+      hintsLeft--;
       hintBtn.val('Hint (' + hintsLeft + ' left)');
     }
 
